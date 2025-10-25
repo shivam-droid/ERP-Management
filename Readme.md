@@ -85,8 +85,8 @@ Authenticate user and return JWT token.
 }
 ```
 
-```Response:
-
+**Response:**
+```json
 {
   "token": "eyJhbGciOiJIUzI1NiIs..."
 }
@@ -96,6 +96,7 @@ Authenticate user and return JWT token.
 
 Create a new user (CA only).
 
+**Request:**
 ```json
 {
   "name": "Ravi Sharma",
@@ -105,8 +106,8 @@ Create a new user (CA only).
 }
 ```
 
-```Response:
-
+**Response:**
+```json
 {
   "id": 2,
   "email": "ravi@techcorp.com",
@@ -119,6 +120,7 @@ Create a new user (CA only).
 
 Fetch all users from the same company with pagination.
 
+**Request:**
 ```json
 {
   "total": 2,
@@ -133,7 +135,8 @@ Fetch all users from the same company with pagination.
 
 Returns the current logged-in user’s profile.
 
-```response
+**Response:**
+```json
 {
   "id": 1,
   "name": "Company Admin",
@@ -147,7 +150,8 @@ Returns the current logged-in user’s profile.
 
 Fetch list of all roles.
 
-```response
+**Response:**
+```json
 [
   { "id": 1, "name": "CA" },
   { "id": 2, "name": "Finance Manager" },
