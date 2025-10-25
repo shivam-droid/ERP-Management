@@ -2,10 +2,9 @@ import fs from "fs";
 import path from "path";
 import Sequelize from "sequelize";
 import { pathToFileURL } from "url";
-import configFile from "../config/config.json" assert { type: "json" };
+import configFile from "../config/config.json" with { type: "json" };
 
 const __filename = new URL(import.meta.url).pathname;
-// Fix Windows drive letter and decode spaces
 const __dirname = path.dirname(decodeURIComponent(__filename).replace(/^\/([A-Z]:)/, "$1"));
 
 const basename = path.basename(__filename);
@@ -20,7 +19,6 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-// Read all .js files in models folder except this file
 const files = fs.readdirSync(__dirname)
   .filter(file => file !== basename && file.slice(-3) === ".js");
 
@@ -31,7 +29,6 @@ for (const file of files) {
   db[model.name] = model;
 }
 
-// Run associations
 Object.keys(db).forEach(modelName => {
   if (db[modelName].associate) {
     db[modelName].associate(db);
