@@ -92,7 +92,7 @@ Authenticate user and return JWT token.
 }
 ```
 
-###2️⃣ POST /users
+### 2️⃣ `POST /users`
 
 Create a new user (CA only).
 
@@ -116,7 +116,7 @@ Create a new user (CA only).
 }
 ```
 
-###3️⃣ GET /users
+### 3️⃣ `GET /users`
 
 Fetch all users from the same company with pagination.
 
@@ -131,7 +131,7 @@ Fetch all users from the same company with pagination.
 }
 ```
 
-###4️⃣ GET /users/me
+### 4️⃣ `GET /users/me`
 
 Returns the current logged-in user’s profile.
 
@@ -146,7 +146,7 @@ Returns the current logged-in user’s profile.
 }
 ```
 
-###5️⃣ GET /roles
+### 5️⃣ `GET /roles`
 
 Fetch list of all roles.
 
@@ -159,20 +159,20 @@ Fetch list of all roles.
 ]
 ```
 
-##⚙️ Setup Instructions
+## ⚙️ Setup Instructions
 
-###1️⃣ Clone the Repository
+### 1️⃣ `Clone the Repository`
 ```
 git clone https://github.com/<your-username>/erp-user-management.git
 cd erp-user-management
 ```
 
-###2️⃣ Install Dependencies
+### 2️⃣ `Install Dependencies`
 ```
 npm install
 ```
 
-###3️⃣ Setup .env File
+### 3️⃣ `Setup .env File`
 
 Create .env in the project root:
 ```
@@ -184,42 +184,42 @@ DB_NAME=erp_system
 JWT_SECRET=mysecretkey
 ```
 
-###4️⃣ Setup Database
+### 4️⃣ `Setup Database`
 
 Make sure MySQL is running, then create the database:
 ```
 CREATE DATABASE erp_system;
 ```
 
-###5️⃣ Run Migrations and Seed Data (optional)
+### 5️⃣ `Run Migrations and Seed Data (optional)`
 ```
 npx sequelize db:migrate
 npx sequelize db:seed:all
 ```
 
-###▶️ Run the Server
+### ▶️ `Run the Server`
 ```
 npm start
 
 ```
 
-##🧪 Run Tests (Jest + Supertest)
+## 🧪 Run Tests (Jest + Supertest)
 
 All API endpoints are tested automatically.
 ```
 npm test
 ```
 
-##🧠 Future Enhancements
+## 🧠 Future Enhancements
 
-*Add email verification for new users
+- Add email verification for new users
 
-*Implement pagination & filtering for companies
+- Implement pagination & filtering for companies
 
-*Add audit logs for user activities
+- Add audit logs for user activities
 
-*Integrate Swagger for API documentation
+- Integrate Swagger for API documentation
 
-##👨‍💻 Developer
+## 👨‍💻 Developer
 
-###Shivam Singhal
+### Shivam Singhal
